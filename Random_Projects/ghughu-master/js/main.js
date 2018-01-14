@@ -67,14 +67,14 @@ $(window).on("load resize", function(){
 
 map=new GMaps({
   div: '#map',
-  lat: 23.790223,
-  lng: 90.414036,
+  lat: 32.2216667,
+  lng: -110.9258333,
 })
 
 map.addMarker({
-        lat: 23.790223,
-        lng: 90.414036,
-        title: 'GhuGhu',
+        lat: 32.2216667,
+        lng: -110.9258333,
+        title: 'Hack Clinic',
         infoWindow: {
             content: '<span class="map-header">Ghu Ghu Headquarters</span><span class="map-address">Build-A/6, Mirpur 14 , Dhaka</span'
         }
