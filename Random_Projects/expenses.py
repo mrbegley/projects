@@ -62,7 +62,7 @@ def number_2():
     print "\nTotal Expenses: $%s" % int(total_expenses)
 
 def number_3():
-   print "Hi" 
+   print "Invest in tron..." 
 
 if option == '1':
     number_1()
