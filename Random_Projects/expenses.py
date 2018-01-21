@@ -18,11 +18,17 @@ left_over = int(monthly_income) - int(total_expenses)
 print "-"*50
 print "\nYour total expenses are : [+] $%s" % total_expenses
 if left_over > 0:
-	print "You save : [+] $%s" % left_over
+	print "You save about : [+] $%s" % left_over
 	print "Save that money!"
 if left_over < 0:
-	print "You lose : [+] $%s" % left_over
+	print "You lose about : [+] $%s" % left_over
 	print "Do better!"
+
+print "-"*50
+print "\nMain Menu"
+print "select by the number"
+print "[1] view "
+print "[2] "
 
 def whattodo():
 	print "-"*50

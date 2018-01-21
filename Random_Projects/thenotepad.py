@@ -21,7 +21,7 @@ def saveas():
     t = text.get("1.0", "end-1c")
     #savelocation = raw_input("> ")
     savelocation = tkFileDialog.asksaveasfilename()
-    file1 = open(savelocation, "w+")
+    file1 = open(savelocation, "w")
     file1.write(t)
     file1.close()
 
