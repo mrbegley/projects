@@ -28,6 +28,7 @@ print "-" * 50
 print "[+] Scan"
 print "[+] DNS Check" 						# The continuing options
 print "[+] Locate"
+print "[+] Change IP/Hostname"
 print "[+] More Options..."
 print "[+] Help"
 print '-' * 50
@@ -127,6 +128,9 @@ def more_options():
 		print "-" * 50
 		print "Welcome to the Packet Sniffer\n"
 		print "Coming Soon...."
+
+def change_IP():
+	print "hi"
 
 if next_step == "help" or next_step == "Help":
 	help()
