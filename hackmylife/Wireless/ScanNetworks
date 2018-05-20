@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+# scan devices near you
+
+sudo iw dev wlan0 scan | grep -A 9 SSID
