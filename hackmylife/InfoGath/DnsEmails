@@ -1,0 +1,45 @@
+#!/bin/bash
+
+echo [+] Target domain..
+echo ' '
+read -p '[+] ' domain
+
+echo ' '
+echo [+] Collecting WhoIs information...
+echo ' '
+whois $domain > domain.txt
+sleep 1
+cat domain.txt
+echo ' '
+
+echo [+] Collecting Dig information...
+echo ' '
+dig $domain > dig.txt
+sleep 1 
+cat dig.txt
+echo ' '
+
+echo [+] Collecting Nslookup information..
+echo ' '
+echo [+] A record of $domain
+echo ' ' 
+nslookup -type=A $domain | grep Address > nslookupA.txt
+cat nslookupA.txt 
+echo ' '
+echo [+] MX record of $domain
+echo ' '
+nslookup -type=mx $domain | grep mail > nslookupmx.txt
+cat nslookupmx.txt
+
+echo ' '
+echo [+] Collecting theHarvester information...This could take a minute
+sleep 1
+echo ' '   
+theharvester -d $domain -l 500 -b linkedin > harvest.txt
+cat harvest.txt
+
+echo ' '
+echo ' '
+echo [+] Cleaning things up...
+sleep 1
+rm -rf domain.txt && rm -rf dig.txt && rm -rf nslookupA.txt && rm -rf nslookupmx.txt && rm -rf harvest.txt && rm -rf stash.sqlite 
