@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Create the password file using words 
+# -p means charset or word1 word2
+crunch 4 5 -p Blue Balls Dog >> ~/Desktop/pass.txt
+
+# View the hashes in the shadow file
+tail /etc/shadow
+
+# View type of encryption
+# Default is SHA512
+more /etc/login.defs
+
+# Copy password hashes to hash.hash file 
+cp /etc/shadow hash.hash
+
+# Run hashcat to view match words with hash
+hashcat -m 1800 -a 0 -o ~/Desktop/passwords.txt hash.hash ~/Desktop/pass.txt --force
