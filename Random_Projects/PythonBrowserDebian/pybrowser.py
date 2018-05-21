@@ -7,9 +7,8 @@ class browser():
     def __init__(self):
         # Create window
         self.much_window = gtk.Window()
-        #self.much_window.set_icon_from_file('doge.png')
         self.much_window.connect('destroy', lambda w: gtk.main_quit())
-        self.much_window.set_default_size(1000, 700)
+        self.much_window.set_default_size(1100, 700)
 
         # Create navigation bar
         self.so_navigation = gtk.HBox()
@@ -32,7 +31,7 @@ class browser():
         # Create view for webpage
         self.very_view = gtk.ScrolledWindow()
         self.such_webview = webkit.WebView()
-        self.such_webview.open('http://duckduckgo.com')
+        self.such_webview.open('https://github.com/mrbegley/projects')
         self.such_webview.connect('title-changed', self.change_title)
         self.such_webview.connect('load-committed', self.change_url)
         self.very_view.add(self.such_webview)
