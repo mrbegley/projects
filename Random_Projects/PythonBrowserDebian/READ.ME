@@ -1,0 +1,12 @@
+# To get Webkit installed on Debian Linux, first need to install following updates and files
+
+sudo apt install libjavascriptcoregtk-1.0-0 && apt install libpango1.0-0 && apt install libwebkitgtk-1.0-0
+
+# After, use wget to install and dpkg python support
+
+wget http://launchpadlibrarian.net/109052632/python-support_1.0.15_all.deb && sudo dpkg -i python-support_1.0.15_all.deb
+
+# Then install webkit
+
+wget http://ftp.br.debian.org/debian/pool/main/p/pywebkitgtk/python-webkit_1.1.8-2_i386.deb && sudo dpkg -i python-webkit_1.1.8-2_i386.deb 
+
